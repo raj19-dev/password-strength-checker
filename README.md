@@ -1,30 +1,29 @@
 # Password Strength Checker
 
-A Python console application that checks password strength and generates secure passwords.
+A simple Python console application to check password strength and generate secure passwords.
 
 ---
 
-## Features
+## Versions
 
-### Version 1
-- Basic password strength checking
+### **Version 1**
+- Basic strength checker
 - Length validation (8–12 characters)
 - Weak / Medium / Strong output
 
-### Version 2
-- Shows missing components:
+### **Version 2**
+- Displays missing components:
   - Uppercase
   - Lowercase
   - Number
   - Special character
-    
-### Version 3
-- Password Generator
-- Ensures all required character types
-- Logs results in `results.txt`
-- Modular code using functions
 - Improved scoring logic
 
+### **Version 3**
+- Added password generator
+- Ensures all required character types
+- Logs results in `results.txt`
+- Modular structure using functions
 
 ---
 
@@ -37,13 +36,21 @@ A Python console application that checks password strength and generates secure 
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
-```bash
-python password_checker.py
+Run the program using:
 
-All results are saved in results.txt
+    python password_checker.py
 
+---
 
-**Author**
-Rajdeep Ganguly
+## Output
+
+Results are saved in:
+
+    results.txt
+
+---
+
+## 👨‍💻 Author
+Rajdeep
