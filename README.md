@@ -25,6 +25,10 @@ A simple Python console application to check password strength and generate secu
 - Logs results in `results.txt`
 - Modular structure using functions
 
+### **Version 4**
+- Made slight improvements
+- Added GUI interface
+
 ---
 
 ## Built With
@@ -40,7 +44,7 @@ A simple Python console application to check password strength and generate secu
 
 Run the program using:
 
-    python password_checker.py
+    gui.py
 
 ---
 
