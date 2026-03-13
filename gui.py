@@ -33,6 +33,15 @@ def block_spaces(event):
     if event.char == " ":
         return "break"
 password_entry.bind("<KeyPress>", block_spaces)
+def toggle_password():
+    if password_entry.cget("show") == "*":
+        password_entry.config(show = "")
+        toggle_btn.config(text = "Hide Password")
+    else:
+        password_entry.config(show = "*")
+        toggle_btn.config(text = "Show Password")
+toggle_btn = ttk.Button(main_frame, text="Show Password", command=toggle_password)
+toggle_btn.pack()
 length_label = ttk.Label(main_frame, text="Enter Length (min. 8):")
 length_label.pack(pady=5)
 length_entry = ttk.Entry(main_frame)

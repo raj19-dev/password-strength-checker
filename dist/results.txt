@@ -1,0 +1,20 @@
+Type: Checked
+Password: helloworld
+Length: 10
+Strength: Weak
+Missing: Uppercase, Number, Special Character
+Date: 2026-03-13 22:03:53
+------------------------------------------
+Type: Checked
+Password: Hello@123
+Length: 9
+Strength: Strong
+Missing: None
+Date: 2026-03-13 22:04:02
+------------------------------------------
+Type: Generated
+Password: JoLS%0'jT|"{
+Length: 12
+Strength: Strong
+Date: 2026-03-13 22:04:11
+------------------------------------------
