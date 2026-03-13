@@ -29,7 +29,11 @@ password_label = ttk.Label(main_frame, text="Enter Password:")
 password_label.pack(pady=5)
 password_entry = ttk.Entry(main_frame, show="*")
 password_entry.pack(pady=5)
-length_label = ttk.Label(main_frame, text="Enter Length (8-12):")
+def block_spaces(event):
+    if event.char == " ":
+        return "break"
+password_entry.bind("<KeyPress>", block_spaces)
+length_label = ttk.Label(main_frame, text="Enter Length (min. 8):")
 length_label.pack(pady=5)
 length_entry = ttk.Entry(main_frame)
 length_entry.pack(pady=5)
@@ -45,6 +49,9 @@ result_label = tk.Label(
 result_label.pack(pady=15)
 def check():
     password = password_entry.get()
+    if not password.strip():
+        result_label.config(text = "Please enter a password.", fg = "#ff4d4d")
+        return
     strength, missing, message = check_password(password)
     if strength is None:
         result_label.config(text=message, fg="#ff4d4d")
@@ -69,8 +76,8 @@ def generate():
     except ValueError:
         result_label.config(text="Please enter a valid number.", fg="#ff4d4d")
         return
-    if length < 8 or length > 12:
-        result_label.config(text="Length must be between 8 and 12.", fg="#ff4d4d")
+    if length < 8:
+        result_label.config(text="Length must be at least 8 characters.", fg="#ff4d4d")
         return
     final_password = generate_password(length)
     result_label.config(
