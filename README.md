@@ -1,60 +1,52 @@
 # Password Strength Checker
 
-A simple Python console application to check password strength and generate secure passwords.
+A Python desktop application to check password strength and generate secure passwords.
+
+
+![demo](demo.gif)
+
+
+---
+
+## Features
+
+- Checks password strength (Weak / Medium / Strong)
+- Identifies missing character types (Uppercase, Lowercase, Number, Special Character)
+- Generate secure random passwords (minimum 8 characters)
+- Show / Hide password toggle
+- Blocks spaces on live input
+- Color-coded results (red / orange / green)
+- Logs all results to 'results.txt' with timestamps
+- Follows NIST guidelines - no arbitrary maximum length
 
 ---
 
 ## Versions
 
-### **Version 1**
-- Basic strength checker
-- Length validation (8–12 characters)
-- Weak / Medium / Strong output
-
-### **Version 2**
-- Displays missing components:
-  - Uppercase
-  - Lowercase
-  - Number
-  - Special character
-- Improved scoring logic
-
-### **Version 3**
-- Added password generator
-- Ensures all required character types
-- Logs results in `results.txt`
-- Modular structure using functions
-
-### **Version 4**
-- Made slight improvements
-- Added GUI interface
-
----
-
-## Built With
-- Python
-- random
-- string
-- datetime
-- File handling
+|---|---|
+| v1 | Basic strength checker, length validation, Weak/Medium/Strong output |
+| v2 | Displays missing components, improved scoring logic |
+| v3 | Added password generator, results logging to results.txt, modular structure |
+| v4 | GUI interface, show/hide toggle, space blocking, removed length cap, fixed generator logic, added docstrings |
 
 ---
 
 ## How to Run
 
-Run the program using:
+**Option 1 -- Run the executable (Windows):**
 
-    gui.py
+Download 'PasswordStrengthChecker.exe' and double click. No Python required.
 
----
+**Option 2 -- Run from source:**
 
-## Output
+'''bash
+pip install tk
+python gui.py
 
-Results are saved in:
+# Built With
+ - Python
+ - Tkinter (GUI)
+ - random, string, datetime (standard library)
 
-    results.txt
-
----
-
-## 👨‍💻 Author
+# Author
 Rajdeep Ganguly
